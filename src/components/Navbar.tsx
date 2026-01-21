@@ -53,8 +53,8 @@ export default function Navbar() {
         >
           <ShoppingBag className="h-5 w-5 text-gray-600 dark:text-gray-300" />
           <span className="font-bold text-xl">
-            <span className="text-primary">Modern</span>
-            <span className="text-secondary">Shop</span>
+            <span className="text-primary">Trend</span>
+            <span className="text-secondary">Mart</span>
           </span>
         </Link>
 

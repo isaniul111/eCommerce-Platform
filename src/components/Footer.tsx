@@ -9,7 +9,7 @@ export default function Footer() {
           {/* Company Info */}
           <div>
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
-              <span className="text-primary font-semibold">Modern</span><span className="text-secondary font-semibold">Shop</span>
+              <span className="text-primary font-semibold">Trend</span><span className="text-secondary font-semibold">Mart</span>
             </h3>
             <p className="text-gray-600 dark:text-gray-300 text-sm mb-4">
               Modern shopping experience with style. Quality products for your everyday needs.
@@ -99,36 +99,38 @@ export default function Footer() {
           </div>
           
           {/* Contact Info */}
-          <div>
-            <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
+           
+           {/* Contact Info */}
+            <div>
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
               Contact Us
-            </h3>
-            <ul className="space-y-3">
-              <li className="flex items-start">
-                <MapPin className="h-5 w-5 text-primary mr-2 mt-0.5" />
-                <span className="text-gray-600 dark:text-gray-300">
-                  1234 Alameda St, Santiago, Chile
-                </span>
-              </li>
-              <li className="flex items-center">
-                <Phone className="h-5 w-5 text-primary mr-2" />
-                <span className="text-gray-600 dark:text-gray-300">
-                  (+56) 9 4455 2084
-                </span>
-              </li>
-              <li className="flex items-center">
-                <Mail className="h-5 w-5 text-primary mr-2" />
-                <span className="text-gray-600 dark:text-gray-300">
-                  support@modernshop.com
-                </span>
-              </li>
-            </ul>
-          </div>
+              </h3>
+              <ul className="space-y-3">
+                   <li className="flex items-start">
+                      <MapPin className="h-5 w-5 text-primary mr-2 mt-0.5" />
+                      <span className="text-gray-600 dark:text-gray-300">
+                       House 12, Road 5, Dhanmondi, Dhaka 1209, Bangladesh
+                     </span>
+                    </li>
+                    <li className="flex items-center">
+                      <Phone className="h-5 w-5 text-primary mr-2" />
+                      <span className="text-gray-600 dark:text-gray-300">
+                     +880 17 1234 5678
+                      </span>
+                    </li>
+                    <li className="flex items-center">
+                      <Mail className="h-5 w-5 text-primary mr-2" />
+                        <span className="text-gray-600 dark:text-gray-300">
+                       support@yourshopbd.com
+                      </span>
+                          </li>
+                    </ul>
+            </div>
         </div>
         
         <div className="border-t border-gray-200 dark:border-gray-700 pt-6 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-600 dark:text-gray-300 text-sm">
-            © {new Date().getFullYear()} <span className="text-primary font-semibold">danipa</span><span className="text-secondary font-semibold">Bernales</span>. All rights reserved.
+            © {new Date().getFullYear()} <span className="text-primary font-semibold">Abdulah Al</span><span className="text-secondary font-semibold">Ahad</span>. All rights reserved.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <Link
