@@ -20,7 +20,6 @@ export default function Contact() {
     e.preventDefault();
     setLoading(true);
     
-    // Simulate API call
     setTimeout(() => {
       setSubmitted(true);
       setLoading(false);
@@ -49,9 +48,9 @@ export default function Contact() {
                     Our Location
                   </h3>
                   <p className="text-gray-600 dark:text-gray-300">
-                    1234 Alameda St<br />
-                    Santiago<br />
-                    Chile
+                    House 12, Road 5<br />
+                    Dhanmondi, Dhaka 1209<br />
+                    Bangladesh
                   </p>
                 </div>
               </div>
@@ -63,8 +62,8 @@ export default function Contact() {
                     Phone
                   </h3>
                   <p className="text-gray-600 dark:text-gray-300">
-                    Customer Service:<br /> 
-                    (+56) 9 4455 2084
+                    Customer Support:<br /> 
+                    +880 17 1234 5678
                   </p>
                 </div>
               </div>
@@ -76,8 +75,8 @@ export default function Contact() {
                     Email
                   </h3>
                   <p className="text-gray-600 dark:text-gray-300">
-                    Customer Service:<br /> 
-                    support@modernshop.com
+                    Support:<br /> 
+                    support@yourshopbd.com
                   </p>
                 </div>
               </div>
@@ -86,11 +85,11 @@ export default function Contact() {
                 <MessageSquare className="h-6 w-6 text-primary mr-3 flex-shrink-0 mt-0.5" />
                 <div>
                   <h3 className="text-lg font-medium text-gray-900 dark:text-white">
-                    Live Chat
+                    Live Support
                   </h3>
                   <p className="text-gray-600 dark:text-gray-300">
-                    Available Monday - Friday<br />
-                    9:00 AM - 6:00 PM
+                    Available 7 Days a Week<br />
+                    10:00 AM - 10:00 PM
                   </p>
                 </div>
               </div>
@@ -102,15 +101,15 @@ export default function Contact() {
               </h3>
               <ul className="space-y-2 text-gray-600 dark:text-gray-300">
                 <li className="flex justify-between">
-                  <span>Monday - Friday:</span>
-                  <span>9:00 AM - 6:00 PM</span>
+                  <span>Saturday - Thursday:</span>
+                  <span>10:00 AM - 10:00 PM</span>
                 </li>
                 <li className="flex justify-between">
-                  <span>Saturday:</span>
-                  <span>10:00 AM - 4:00 PM</span>
+                  <span>Friday:</span>
+                  <span>4:00 PM - 10:00 PM</span>
                 </li>
                 <li className="flex justify-between">
-                  <span>Sunday:</span>
+                  <span>Government Holidays:</span>
                   <span>Closed</span>
                 </li>
               </ul>
@@ -136,7 +135,7 @@ export default function Contact() {
                   Message sent successfully!
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300 mb-4">
-                  Thank you for contacting us. We've received your message and will respond within 24-48 hours.
+                  Thanks for contacting us. Our support team will reply within 24 hours.
                 </p>
                 <button
                   onClick={() => {
@@ -152,12 +151,11 @@ export default function Contact() {
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+                    <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                       Your Name *
                     </label>
                     <input
                       type="text"
-                      id="name"
                       name="name"
                       value={formData.name}
                       onChange={handleChange}
@@ -167,12 +165,11 @@ export default function Contact() {
                   </div>
                   
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+                    <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                       Your Email *
                     </label>
                     <input
                       type="email"
-                      id="email"
                       name="email"
                       value={formData.email}
                       onChange={handleChange}
@@ -183,11 +180,10 @@ export default function Contact() {
                 </div>
                 
                 <div>
-                  <label htmlFor="subject" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                     Subject *
                   </label>
                   <select
-                    id="subject"
                     name="subject"
                     value={formData.subject}
                     onChange={handleChange}
@@ -204,11 +200,10 @@ export default function Contact() {
                 </div>
                 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                     Your Message *
                   </label>
                   <textarea
-                    id="message"
                     name="message"
                     value={formData.message}
                     onChange={handleChange}
@@ -223,17 +218,7 @@ export default function Contact() {
                   disabled={loading}
                   className="w-full px-6 py-3 bg-primary text-white rounded-md hover:bg-magenta-600 transition-colors disabled:bg-gray-400 flex items-center justify-center"
                 >
-                  {loading ? (
-                    <>
-                      <div className="animate-spin rounded-full h-5 w-5 border-t-2 border-b-2 border-white mr-2"></div>
-                      Sending...
-                    </>
-                  ) : (
-                    <>
-                      <Send className="h-5 w-5 mr-2" />
-                      Send Message
-                    </>
-                  )}
+                  {loading ? "Sending..." : "Send Message"}
                 </button>
               </form>
             )}
@@ -248,14 +233,14 @@ export default function Contact() {
         </h2>
         <div className="h-96 bg-gray-200 dark:bg-gray-700 rounded-lg overflow-hidden">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3329.176!2d-70.6557!3d-33.4447!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c5a712492067%3A0xdf50ee85ca2194d1!2sAlameda%2C%20Santiago%2C%20Chile!5e0!3m2!1sen!2s!4v1709561234567!5m2!1sen!2s"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.902240506889!2d90.3811!3d23.7509!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8bfc2d3b0c5%3A0xf12a6e0d5f3b91f2!2sDhanmondi%2C%20Dhaka!5e0!3m2!1sen!2sbd!4v1709569999999"
             width="100%"
             height="100%"
             style={{ border: 0 }}
             allowFullScreen
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-            title="ModernShop Location"
+            title="Shop Location"
           ></iframe>
         </div>
       </div>
